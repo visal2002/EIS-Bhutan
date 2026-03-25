@@ -25,34 +25,45 @@
 
 ## Getting Started
 
+> **⚠️ IMPORTANT: Dual Terminal Setup**
+> This application requires **both** the frontend and backend servers to be running simultaneously in **two separate terminal windows**. The frontend will not be able to fetch data if the backend is not running.
+
 ### Prerequisites
 
 - **Node.js** v16+ and **npm** v8+
 - **Python** v3.10+ (for backend)
 
-### Frontend Setup
+### Terminal 1: Backend Setup
+
+Open your first terminal and run:
+
+```bash
+cd eis-backend
+pip install -r requirements/development.txt
+python manage.py migrate
+python manage.py runserver   # Starts API at http://localhost:8000
+```
+
+*(Leave this terminal open and running!)*
+
+### Terminal 2: Frontend Setup
+
+Open a **new, second terminal window** and run:
 
 ```bash
 cd eis-frontend
 cp .env.example .env        # Configure API URL
 npm install --legacy-peer-deps
-npm run dev                  # Starts at http://localhost:5173
+npm run dev                  # Starts UI at http://localhost:5173
 ```
+
+*(Leave this terminal open and running!)*
 
 ### Environment Variables
 
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `VITE_API_BASE_URL` | `/api` | Backend API base URL. In development, Vite proxies `/api` to `localhost:8000` automatically. |
-
-### Backend Setup
-
-```bash
-cd eis-backend
-pip install -r requirements/local.txt
-python manage.py migrate
-python manage.py runserver   # Starts at http://localhost:8000
-```
 
 ## Project Structure
 
