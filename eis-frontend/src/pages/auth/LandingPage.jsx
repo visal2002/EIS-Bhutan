@@ -350,7 +350,7 @@ export default function LandingPage() {
                     <div className="lg:absolute lg:bottom-12 lg:right-8 xl:right-16 mt-8 lg:mt-0 w-full lg:w-72 xl:w-80 flex-shrink-0">
                         <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                             <div className="relative h-40 overflow-hidden">
-                                <img src="/images/R.jpg" alt="Bhutan energy infrastructure" className="absolute inset-0 w-full h-full object-cover"
+                                <img src="/images/bhutan-energy.jpg" alt="Bhutan energy infrastructure" className="absolute inset-0 w-full h-full object-cover"
                                     onError={e=>{e.target.parentElement.style.background=P.forest;e.target.style.display="none";}}/>
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/85"/>
                                 <div className="absolute bottom-0 left-0 right-0 p-3">

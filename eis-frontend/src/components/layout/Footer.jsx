@@ -69,8 +69,8 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-primary-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
                     <p>&copy; {currentYear} Department of Energy, Bhutan. All rights reserved.</p>
                     <div className="flex gap-4">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
                 </div>
             </div>

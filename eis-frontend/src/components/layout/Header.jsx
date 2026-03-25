@@ -4,15 +4,10 @@ import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { Menu, Bell, LogOut, ChevronRight, Sun, Moon, Monitor,
          Settings, Check, UserCircle, Maximize, Minimize, Home } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import { getInitials } from '../../utils/getInitials';
 import { authAPI, getUser, getRefreshToken, clearAuth } from '../../services/api';
 import { useTheme } from '../../context/ThemeContext';
 import { useSiteSettings } from '../../context/SiteSettingsContext';
-
-const getInitials = u => {
-    const f = u?.first_name?.[0] || '';
-    const l = u?.last_name?.[0]  || '';
-    return (f + l).toUpperCase() || u?.username?.[0]?.toUpperCase() || '?';
-};
 
 // ── Theme picker ──────────────────────────────────────────────────
 function ThemePicker({ onClose }) {

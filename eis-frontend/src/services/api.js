@@ -1,5 +1,5 @@
 // frontend/src/services/api.js
-const BASE_URL = "http://127.0.0.1:8000/api";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 export const getAccessToken  = () => localStorage.getItem("access_token");
 export const getRefreshToken = () => localStorage.getItem("refresh_token");

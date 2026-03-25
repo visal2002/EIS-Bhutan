@@ -11,7 +11,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react', 'react-hooks'],
   rules: {
-    'no-unused-vars': 'off', // Turning off to not break build, we just want styling basically OR we can make it a warning.
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'react/prop-types': 'off',
   },
 }

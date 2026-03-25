@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { savePermissions } from '../../context/PermissionsContext';
 import { Eye, EyeOff, ArrowLeft, LogIn, AlertTriangle } from 'lucide-react';
 import { useSiteSettings } from '../../context/SiteSettingsContext';
+import { ROLE_DASHBOARD_ROUTES } from '../../constants/routes';
 
 // ── NDI colours (Bhutan NDI UI Spec v3) ──────────────────────────
 const NDI_TEAL = '#5AC994';
@@ -45,7 +46,7 @@ function NDIModal({ onClose }) {
     // Step 2: poll status every 3s — starts as soon as we have a threadId
     useEffect(() => {
         if (!threadId) return;
-        const ROUTES = { ADMIN: '/admin/dashboard', DOE_HEAD: '/doe/dashboard', DATA_MANAGER: '/manager/dashboard', DATA_FOCAL: '/focal/dashboard', VIEWER: '/viewer/dashboard' };
+
         const nextUrl = new URLSearchParams(window.location.search).get('next') || null;
         const timer = setInterval(async () => {
             try {
@@ -62,7 +63,7 @@ function NDIModal({ onClose }) {
                         if (data.needs_profile_setup) {
                             window.location.href = '/ndi/setup';
                         } else {
-                            window.location.href = nextUrl || ROUTES[data.user?.role?.role_name] || '/admin/dashboard';
+                            window.location.href = nextUrl || ROLE_DASHBOARD_ROUTES[data.user?.role?.role_name] || '/admin/dashboard';
                         }
                     }, 1200);
                 } else if (data.status === 'rejected') {
@@ -425,14 +426,7 @@ export default function LoginPage() {
         const token = localStorage.getItem('access_token');
         const user  = JSON.parse(localStorage.getItem('user') || 'null');
         if (token && user) {
-            const ROUTES = {
-                ADMIN:        '/admin/dashboard',
-                DOE_HEAD:     '/doe/dashboard',
-                DATA_MANAGER: '/manager/dashboard',
-                DATA_FOCAL:   '/focal/dashboard',
-                VIEWER:       '/viewer/dashboard',
-            };
-            const dest = ROUTES[user?.role?.role_name] || '/admin/dashboard';
+            const dest = ROLE_DASHBOARD_ROUTES[user?.role?.role_name] || '/admin/dashboard';
             navigate(dest, { replace: true });
         }
     }, [navigate]);
@@ -453,14 +447,7 @@ export default function LoginPage() {
 
     const handleLoginSuccess = (data) => {
         if (data.must_change_password) { navigate('/change-password'); return; }
-        const routes = {
-            ADMIN:        '/admin/dashboard',
-            DOE_HEAD:     '/doe/dashboard',
-            DATA_MANAGER: '/manager/dashboard',
-            DATA_FOCAL:   '/focal/dashboard',
-            VIEWER:       '/viewer/dashboard',
-        };
-        const dest = nextUrl || routes[data.user?.role?.role_name] || '/admin/dashboard';
+        const dest = nextUrl || ROLE_DASHBOARD_ROUTES[data.user?.role?.role_name] || '/admin/dashboard';
         navigate(dest, { replace: true });
     };
 

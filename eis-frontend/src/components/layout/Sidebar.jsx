@@ -7,6 +7,7 @@ import {
     Sun, Moon, Monitor, Maximize, Minimize,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import { getInitials } from '../../utils/getInitials';
 import { getUser } from '../../services/api';
 import { useSiteSettings } from '../../context/SiteSettingsContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -82,11 +83,7 @@ const NAV_GROUPS = [
     },
 ];
 
-const getInitials = u => {
-    const f = u?.first_name?.[0] || '';
-    const l = u?.last_name?.[0]  || '';
-    return (f + l).toUpperCase() || u?.username?.[0]?.toUpperCase() || 'EIS';
-};
+
 
 const ROLE_LABEL = {
     ADMIN:        'System Admin',

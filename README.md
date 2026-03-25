@@ -1,52 +1,94 @@
 # EIS-Bhutan
 
-EIS-Bhutan (Environment Information System) is a comprehensive web application delivering critical data and analytics for Bhutan's environmental and energy sectors. It features interactive dashboards, dynamic maps, data visualization, and a modern, responsive user interface.
+**Environment Information System** — Bhutan's unified platform for energy data collection, cross-sector analytics, and IPCC-aligned GHG reporting across all 20 dzongkhags and 9 energy streams.
 
-## 🚀 Features
+## Features
 
-- **Interactive Dashboards:** Real-time data visualization using Recharts.
-- **Dynamic Maps:** Explore environmental data geographically.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop devices.
-- **Modern UI/UX:** Built with Tailwind CSS, Framer Motion, and Lucide React.
-- **Backend Analytics:** Powered by a robust Django backend.
-- **Secure Authentication:** Integrated with Bhutan NDI Login.
+- **Interactive Dashboards** — Recharts-powered data visualization with Sankey diagrams, maps, and trend charts
+- **Bhutan Map** — SVG-based dzongkhag-level energy data exploration with hover tooltips
+- **Role-Based Access** — 5 user roles (Admin, DOE Head, Data Manager, Data Focal, Viewer) with granular module-level permissions
+- **NDI Integration** — Bhutan National Digital Identity wallet login via QR code
+- **Master Data Engine** — Generic CRUD interface for 9 master data modules (sectors, vehicle types, conversion factors, etc.)
+- **Dark Mode** — System-aware theme switching with manual override
+- **Responsive Design** — Fully optimized for mobile, tablet, and desktop
 
-## 📸 Screenshots
+## Tech Stack
 
-![EIS-Bhutan App Screenshot](./screenshot.png)
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18, Vite, Tailwind CSS 3 |
+| Charts | Recharts |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Backend | Django, Django REST Framework |
+| Auth | JWT + Bhutan NDI |
 
-## 🛠️ Technology Stack
-
-**Frontend:**
-- [React 18](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Recharts](https://recharts.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-
-**Backend:**
-- Python 3
-- Django
-
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v16+)
-- Python (v3.10+)
 
-### Running the Frontend
+- **Node.js** v16+ and **npm** v8+
+- **Python** v3.10+ (for backend)
+
+### Frontend Setup
+
 ```bash
 cd eis-frontend
+cp .env.example .env        # Configure API URL
 npm install --legacy-peer-deps
-npm run dev
+npm run dev                  # Starts at http://localhost:5173
 ```
 
-### Running the Backend
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `VITE_API_BASE_URL` | `/api` | Backend API base URL. In development, Vite proxies `/api` to `localhost:8000` automatically. |
+
+### Backend Setup
+
 ```bash
 cd eis-backend
 pip install -r requirements/local.txt
-python manage.py runserver
+python manage.py migrate
+python manage.py runserver   # Starts at http://localhost:8000
 ```
 
-## 📝 License
+## Project Structure
+
+```
+eis-frontend/
+├── public/images/           # Static images (logos, hero, map assets)
+├── src/
+│   ├── App.jsx              # Root component with route definitions
+│   ├── main.jsx             # Entry point, context providers
+│   ├── styles/              # Global CSS (Tailwind directives)
+│   ├── components/
+│   │   ├── admin/           # Admin-specific components (UserDrawer)
+│   │   └── layout/          # Layout components (Header, Sidebar, Footer)
+│   ├── constants/           # Static data (dzongkhag data, energy data, routes)
+│   ├── context/             # React Context providers (Theme, Permissions, Site Settings)
+│   ├── hooks/               # Custom React hooks
+│   ├── pages/
+│   │   ├── admin/           # Protected admin pages (Dashboard, User Management, Settings)
+│   │   │   └── master-data/ # Master data modules (generic CRUD engine)
+│   │   └── auth/            # Public pages (Landing, Login, Public Dashboard)
+│   ├── services/            # API service layer (fetch wrapper, auth helpers)
+│   └── utils/               # Utility functions (cn, getInitials)
+├── .env.example             # Environment variable template
+├── vite.config.js           # Vite config with API proxy
+├── tailwind.config.js       # Tailwind theme customization
+└── package.json
+```
+
+## Build for Production
+
+```bash
+cd eis-frontend
+npm run build     # Output: dist/
+npm run preview   # Preview production build locally
+```
+
+## License
+
 This project is licensed under the MIT License.

@@ -37,15 +37,7 @@ import {
 } from './pages/admin/master-data/pages';
 
 import DashboardLayout from './components/layout/DashboardLayout';
-
-// ── Role → home dashboard route ───────────────────────────────────
-const ROLE_DASHBOARD = {
-    ADMIN:        '/admin/dashboard',
-    DOE_HEAD:     '/doe/dashboard',
-    DATA_MANAGER: '/manager/dashboard',
-    DATA_FOCAL:   '/focal/dashboard',
-    VIEWER:       '/viewer/dashboard',
-};
+import { ROLE_DASHBOARD_ROUTES } from './constants/routes';
 
 // ── Access denied page ────────────────────────────────────────────
 function AccessDenied() {
@@ -108,7 +100,7 @@ function Protected({ children, module, action = 'can_view', adminOnly, allowedRo
 
     // Legacy role-name list guard (for routes not yet mapped to modules)
     if (allowedRoles && role && !allowedRoles.includes(role)) {
-        const dest = ROLE_DASHBOARD[role] || '/viewer/dashboard';
+        const dest = ROLE_DASHBOARD_ROUTES[role] || '/viewer/dashboard';
         return <Navigate to={dest} replace />;
     }
 
