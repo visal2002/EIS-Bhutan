@@ -1,0 +1,60 @@
+# ═══════════════════════════════════════════════════
+#  EIS JDMS — Backend .gitignore
+#  Place this at: eis_jdms/backend/.gitignore
+# ═══════════════════════════════════════════════════
+
+# ── Python ───────────────────────────────────────────
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+
+# ── Virtual environment ───────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Django ───────────────────────────────────────────
+*.log
+logs/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# ── Environment secrets ───────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Stray files (belong in frontend/) ────────────────
+package.json
+package-lock.json
+node_modules/
+
+# ── IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Testing & coverage ───────────────────────────────
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+.pytest_cache/
+
+# ── Distribution ─────────────────────────────────────
+dist/
+build/
+*.egg-info/

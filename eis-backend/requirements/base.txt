@@ -1,0 +1,40 @@
+# ── Core Django ────────────────────────────────────────────────────
+Django==5.0.6
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+django-cors-headers==4.3.1
+django-filter==24.2
+
+# ── Database ────────────────────────────────────────────────────────
+psycopg2-binary==2.9.9
+
+# ── Server ──────────────────────────────────────────────────────────
+uvicorn[standard]==0.29.0
+gunicorn==22.0.0
+
+# ── Async tasks ─────────────────────────────────────────────────────
+celery==5.3.6
+django-celery-beat==2.6.0
+django-celery-results==2.5.1
+redis==5.0.3
+
+# ── Data processing & exports ────────────────────────────────────────
+openpyxl==3.1.2
+reportlab==4.1.0
+pandas==2.2.2
+
+# ── HTTP & external APIs ─────────────────────────────────────────────
+requests==2.32.2
+
+# ── Environment (.env loading — used in manage.py and development.py) ─
+python-dotenv==1.0.1
+
+# ── Image processing (avatar upload) ─────────────────────────────────
+Pillow
+
+# ── 2FA / TOTP / QR codes (used in authentication/views.py MFA) ──────
+pyotp==2.9.0
+qrcode==7.4.2
+
+# ── Admin UI theme ────────────────────────────────────────────────────
+django-unfold==0.35.0
