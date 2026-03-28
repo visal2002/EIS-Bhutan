@@ -13,9 +13,9 @@ import {
 } from 'lucide-react';
 import PublicNavbar from '../../components/layout/PublicNavbar';
 import Footer from '../../components/layout/Footer';
-import { nationalData, dzongkhagData } from '../../constants/DzongkhagData';
-import { energyData, availableYears } from '../../constants/EnergyData';
-import { dzongkhagPaths } from '../../constants/DzongkhagPaths';
+import { nationalData, dzongkhagData } from '../../constants/dzongkhagData';
+import { energyData, availableYears } from '../../constants/energyData';
+import { dzongkhagPaths } from '../../constants/dzongkhagPaths';
 
 // ─── colour palette ───────────────────────────────────────────────
 const G = {

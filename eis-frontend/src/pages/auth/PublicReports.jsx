@@ -10,8 +10,8 @@ import {
 } from 'lucide-react';
 import PublicNavbar from '../../components/layout/PublicNavbar';
 import Footer from '../../components/layout/Footer';
-import { energyData, availableYears } from '../../constants/EnergyData';
-import { nationalData } from '../../constants/DzongkhagData';
+import { energyData, availableYears } from '../../constants/energyData';
+import { nationalData } from '../../constants/dzongkhagData';
 
 // ─── report catalogue ─────────────────────────────────────────────
 const REPORTS = [
