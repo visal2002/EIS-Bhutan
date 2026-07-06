@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils.html import format_html
 from unfold.admin import ModelAdmin
 from unfold.decorators import display
-from .models import SiteSetting, SystemSetting, LandingPageSlide, BlockType, LandingPageSection
+from .models import SiteSetting, SystemSetting, BlockType, LandingPageSection
 
 
 class SiteSettingAdminForm(forms.ModelForm):
@@ -148,27 +148,25 @@ class SiteSettingAdmin(ModelAdmin):   # ← Unfold ModelAdmin — styled correct
 
 
 # ── System Setting Admin ──────────────────────────────────────────
-from django import forms as django_forms
-from .models import SystemSetting
 
 
-class SystemSettingAdminForm(django_forms.ModelForm):
+class SystemSettingAdminForm(forms.ModelForm):
     """Mask secret fields so they show dots but can be overwritten."""
-    ndi_client_secret   = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="NDI Client Secret")
-    ndi_webhook_secret  = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="NDI Webhook Secret")
-    email_host_password = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="SMTP Password")
-    mas_api_key         = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="MAS API Key")
-    firms_api_key       = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="FIRMS API Key")
-    iis_api_key         = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="IIS API Key")
-    ofs_api_key         = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="OFS API Key")
-    eralis_api_key      = django_forms.CharField(required=False, widget=django_forms.PasswordInput(render_value=False), label="eRALIS API Key")
+    ndi_client_secret   = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="NDI Client Secret")
+    ndi_webhook_secret  = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="NDI Webhook Secret")
+    email_host_password = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="SMTP Password")
+    mas_api_key         = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="MAS API Key")
+    firms_api_key       = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="FIRMS API Key")
+    iis_api_key         = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="IIS API Key")
+    ofs_api_key         = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="OFS API Key")
+    eralis_api_key      = forms.CharField(required=False, widget=forms.PasswordInput(render_value=False), label="eRALIS API Key")
 
     class Meta:
         model  = SystemSetting
         fields = "__all__"
         widgets = {
-            "allowed_hosts":  django_forms.Textarea(attrs={"rows": 2}),
-            "cors_origins":   django_forms.Textarea(attrs={"rows": 2}),
+            "allowed_hosts":  forms.Textarea(attrs={"rows": 2}),
+            "cors_origins":   forms.Textarea(attrs={"rows": 2}),
         }
 
     def _keep(self, field):
@@ -277,15 +275,11 @@ class SystemSettingAdmin(ModelAdmin):
             pass
 
     def response_change(self, request, obj):
-        from django.http import HttpResponseRedirect
-        from django.urls import reverse
         return HttpResponseRedirect(
             reverse("admin:administration_systemsetting_change", args=[obj.pk])
         )
 
     def changelist_view(self, request, extra_context=None):
-        from django.http import HttpResponseRedirect
-        from django.urls import reverse
         obj = SystemSetting.get()
         return HttpResponseRedirect(
             reverse("admin:administration_systemsetting_change", args=[obj.pk])
