@@ -1,0 +1,1056 @@
+﻿[
+{
+  "model": "master_data.fueltype",
+  "pk": 98,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.765Z",
+    "updated_at": "2026-03-31T20:36:02.765Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "LIQ-F",
+    "fuel_name": "Liquid Fuels",
+    "parent_fuel": null,
+    "fuel_category": "PETROLEUM",
+    "description": "Liquid fossil fuels"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 99,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.766Z",
+    "updated_at": "2026-03-31T20:36:02.766Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "SOL-F",
+    "fuel_name": "Solid Fuels",
+    "parent_fuel": null,
+    "fuel_category": "COAL",
+    "description": "Solid fossil fuels"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 100,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.767Z",
+    "updated_at": "2026-03-31T20:36:02.767Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "GAS-F",
+    "fuel_name": "Gaseous Fuels",
+    "parent_fuel": null,
+    "fuel_category": "OTHERS",
+    "description": "Gaseous fuels"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 101,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.768Z",
+    "updated_at": "2026-03-31T20:36:02.768Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "FOS-F",
+    "fuel_name": "Other Fossil Fuels",
+    "parent_fuel": null,
+    "fuel_category": "OTHERS",
+    "description": "Other non-renewable fuels"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 102,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.769Z",
+    "updated_at": "2026-03-31T20:36:02.769Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "PEAT-F",
+    "fuel_name": "Peat",
+    "parent_fuel": null,
+    "fuel_category": "OTHERS",
+    "description": "Peat and peat products"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 103,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.770Z",
+    "updated_at": "2026-03-31T20:36:02.770Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-S",
+    "fuel_name": "Biomass - solid",
+    "parent_fuel": null,
+    "fuel_category": "BIOMASS",
+    "description": "Solid biomass and waste"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 104,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.771Z",
+    "updated_at": "2026-03-31T20:36:02.771Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-L",
+    "fuel_name": "Biomass - liquid",
+    "parent_fuel": null,
+    "fuel_category": "BIOMASS",
+    "description": "Liquid biofuels"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 105,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.772Z",
+    "updated_at": "2026-03-31T20:36:02.772Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-G",
+    "fuel_name": "Biomass - gas",
+    "parent_fuel": null,
+    "fuel_category": "BIOMASS",
+    "description": "Biogas from various sources"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 106,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.773Z",
+    "updated_at": "2026-03-31T20:36:02.773Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-O",
+    "fuel_name": "Biomass - other",
+    "parent_fuel": null,
+    "fuel_category": "BIOMASS",
+    "description": "Other biomass and waste"
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 107,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.774Z",
+    "updated_at": "2026-03-31T20:36:02.774Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "AVG",
+    "fuel_name": "Aviation Gasoline",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 108,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.775Z",
+    "updated_at": "2026-03-31T20:36:02.775Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIT",
+    "fuel_name": "Bitumen",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 109,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.776Z",
+    "updated_at": "2026-03-31T20:36:02.776Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "CRU",
+    "fuel_name": "Crude Oil",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 110,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.777Z",
+    "updated_at": "2026-03-31T20:36:02.777Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "ETH",
+    "fuel_name": "Ethane",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 111,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.777Z",
+    "updated_at": "2026-03-31T20:36:02.777Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "DIE-OIL",
+    "fuel_name": "Gas/Diesel Oil",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 112,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.778Z",
+    "updated_at": "2026-03-31T20:36:02.778Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "JTL-GAS",
+    "fuel_name": "Jet Gasoline",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 113,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.779Z",
+    "updated_at": "2026-03-31T20:36:02.779Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "JTK-KER",
+    "fuel_name": "Jet Kerosene",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 114,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.780Z",
+    "updated_at": "2026-03-31T20:36:02.780Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "LPG-GEN",
+    "fuel_name": "Liquefied Petroleum Gases",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 115,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.781Z",
+    "updated_at": "2026-03-31T20:36:02.781Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "LUB",
+    "fuel_name": "Lubricants",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 116,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.782Z",
+    "updated_at": "2026-03-31T20:36:02.782Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "MGS-GAS",
+    "fuel_name": "Motor Gasoline",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 117,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.783Z",
+    "updated_at": "2026-03-31T20:36:02.783Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "NAP",
+    "fuel_name": "Naphtha",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 118,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.784Z",
+    "updated_at": "2026-03-31T20:36:02.784Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "NGL",
+    "fuel_name": "Natural Gas Liquids",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 119,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.785Z",
+    "updated_at": "2026-03-31T20:36:02.785Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "ORI",
+    "fuel_name": "Orimulsion",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 120,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.786Z",
+    "updated_at": "2026-03-31T20:36:02.786Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OTK-KER",
+    "fuel_name": "Other Kerosene",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 121,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.787Z",
+    "updated_at": "2026-03-31T20:36:02.787Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OPP",
+    "fuel_name": "Other Petroleum Products",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 122,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.788Z",
+    "updated_at": "2026-03-31T20:36:02.788Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "PAW-WAX",
+    "fuel_name": "Paraffin Waxes",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 123,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.789Z",
+    "updated_at": "2026-03-31T20:36:02.789Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "PCK-COK",
+    "fuel_name": "Petroleum Coke",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 124,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.789Z",
+    "updated_at": "2026-03-31T20:36:02.789Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "RFD-FED",
+    "fuel_name": "Refinery Feedstocks",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 125,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.790Z",
+    "updated_at": "2026-03-31T20:36:02.790Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "RFG-GAS",
+    "fuel_name": "Refinery Gas",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 126,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.791Z",
+    "updated_at": "2026-03-31T20:36:02.791Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "RFO-OIL",
+    "fuel_name": "Residual Fuel Oil",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 127,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.792Z",
+    "updated_at": "2026-03-31T20:36:02.792Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "SHA-OIL",
+    "fuel_name": "Shale Oil",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 128,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.792Z",
+    "updated_at": "2026-03-31T20:36:02.792Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "WSB-SPR",
+    "fuel_name": "White Spirit and SBP",
+    "parent_fuel": 98,
+    "fuel_category": "PETROLEUM",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 129,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.793Z",
+    "updated_at": "2026-03-31T20:36:02.793Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "ANT-COAL",
+    "fuel_name": "Anthracite",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 130,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.794Z",
+    "updated_at": "2026-03-31T20:36:02.794Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BLS-GAS",
+    "fuel_name": "Blast Furnace Gas",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 131,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.796Z",
+    "updated_at": "2026-03-31T20:36:02.796Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BRN-BRQ",
+    "fuel_name": "Brown Coal Briquettes",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 132,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.797Z",
+    "updated_at": "2026-03-31T20:36:02.797Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "COA-TAR",
+    "fuel_name": "Coal Tar",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 133,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.798Z",
+    "updated_at": "2026-03-31T20:36:02.798Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "COK-COK",
+    "fuel_name": "Coke Oven Coke / Lignite Coke",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 134,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.799Z",
+    "updated_at": "2026-03-31T20:36:02.799Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "COK-GAS",
+    "fuel_name": "Coke Oven Gas",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 135,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.799Z",
+    "updated_at": "2026-03-31T20:36:02.799Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "COK-COA",
+    "fuel_name": "Coking Coal",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 136,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.800Z",
+    "updated_at": "2026-03-31T20:36:02.800Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "GAS-COK",
+    "fuel_name": "Gas Coke",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 137,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.801Z",
+    "updated_at": "2026-03-31T20:36:02.801Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "GAS-WRK",
+    "fuel_name": "Gas Works Gas",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 138,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.802Z",
+    "updated_at": "2026-03-31T20:36:02.802Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "LIG-COA",
+    "fuel_name": "Lignite",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 139,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.803Z",
+    "updated_at": "2026-03-31T20:36:02.803Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OIL-SHA",
+    "fuel_name": "Oil Shale / Tar Sands",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 140,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.804Z",
+    "updated_at": "2026-03-31T20:36:02.804Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OTB-BIT",
+    "fuel_name": "Other Bituminous Coal",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 141,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.805Z",
+    "updated_at": "2026-03-31T20:36:02.805Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OXY-GAS",
+    "fuel_name": "Oxygen Steel Furnace Gas",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 142,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.806Z",
+    "updated_at": "2026-03-31T20:36:02.806Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "PAT-FUL",
+    "fuel_name": "Patent Fuel",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 143,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.807Z",
+    "updated_at": "2026-03-31T20:36:02.807Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "SUB-BIT",
+    "fuel_name": "Sub-Bituminous Coal",
+    "parent_fuel": 99,
+    "fuel_category": "COAL",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 144,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.807Z",
+    "updated_at": "2026-03-31T20:36:02.807Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "NAT-GAS",
+    "fuel_name": "Natural Gas (Dry)",
+    "parent_fuel": 100,
+    "fuel_category": "OTHERS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 145,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.808Z",
+    "updated_at": "2026-03-31T20:36:02.808Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "IND-WAS",
+    "fuel_name": "Industrial Wastes",
+    "parent_fuel": 101,
+    "fuel_category": "OTHERS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 146,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.809Z",
+    "updated_at": "2026-03-31T20:36:02.809Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "MUN-WAS",
+    "fuel_name": "Municipal Wastes (nonbiomass)",
+    "parent_fuel": 101,
+    "fuel_category": "OTHERS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 147,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.810Z",
+    "updated_at": "2026-03-31T20:36:02.810Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "WAS-OIL",
+    "fuel_name": "Waste Oils",
+    "parent_fuel": 101,
+    "fuel_category": "OTHERS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 148,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.811Z",
+    "updated_at": "2026-03-31T20:36:02.811Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "PEAT-P",
+    "fuel_name": "Peat",
+    "parent_fuel": 102,
+    "fuel_category": "OTHERS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 149,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.812Z",
+    "updated_at": "2026-03-31T20:36:02.812Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "CHA-COA",
+    "fuel_name": "Charcoal",
+    "parent_fuel": 103,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 150,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.813Z",
+    "updated_at": "2026-03-31T20:36:02.813Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OTB-BIO",
+    "fuel_name": "Other Primary Solid Biomass",
+    "parent_fuel": 103,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 151,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.815Z",
+    "updated_at": "2026-03-31T20:36:02.815Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "WOD-WAS",
+    "fuel_name": "Wood/Wood Waste",
+    "parent_fuel": 103,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 152,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.816Z",
+    "updated_at": "2026-03-31T20:36:02.816Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-DIE",
+    "fuel_name": "Biodiesels",
+    "parent_fuel": 104,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 153,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.817Z",
+    "updated_at": "2026-03-31T20:36:02.817Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "BIO-GAS",
+    "fuel_name": "Biogasoline",
+    "parent_fuel": 104,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 154,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.818Z",
+    "updated_at": "2026-03-31T20:36:02.818Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OTB-LIQ",
+    "fuel_name": "Other Liquid Biofuels",
+    "parent_fuel": 104,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 155,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.819Z",
+    "updated_at": "2026-03-31T20:36:02.819Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "SUL-LYE",
+    "fuel_name": "Sulphite lyes (Black Liquor)",
+    "parent_fuel": 104,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 156,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.819Z",
+    "updated_at": "2026-03-31T20:36:02.819Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "LAN-GAS",
+    "fuel_name": "Landfill Gas",
+    "parent_fuel": 105,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 157,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.820Z",
+    "updated_at": "2026-03-31T20:36:02.820Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "OTB-BGS",
+    "fuel_name": "Other Biogas",
+    "parent_fuel": 105,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 158,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.821Z",
+    "updated_at": "2026-03-31T20:36:02.821Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "SLU-GAS",
+    "fuel_name": "Sludge Gas",
+    "parent_fuel": 105,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+},
+{
+  "model": "master_data.fueltype",
+  "pk": 159,
+  "fields": {
+    "created_at": "2026-03-31T20:36:02.822Z",
+    "updated_at": "2026-03-31T20:36:02.822Z",
+    "created_by": null,
+    "updated_by": null,
+    "is_active": true,
+    "deactivated_at": null,
+    "fuel_code": "MUN-BIO",
+    "fuel_name": "Municipal Wastes (biomass)",
+    "parent_fuel": 106,
+    "fuel_category": "BIOMASS",
+    "description": ""
+  }
+}
+]
