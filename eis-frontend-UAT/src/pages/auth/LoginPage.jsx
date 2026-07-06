@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { savePermissions } from '../../context/PermissionsContext';
 import { Eye, EyeOff, ArrowLeft, LogIn, AlertTriangle } from 'lucide-react';
 import { useSiteSettings } from '../../context/SiteSettingsContext';
+import { BASE_URL } from '../../services/api';
 
 // ── NDI colours (Bhutan NDI UI Spec v3) ──────────────────────────
 const NDI_TEAL = '#5AC994';
@@ -26,7 +27,7 @@ function NDIModal({ onClose }) {
         initiated.current = true;
         (async () => {
             try {
-                const res  = await fetch('/api/auth/ndi/initiate/', {
+                const res  = await fetch(`${BASE_URL}/auth/ndi/initiate/`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                 });
@@ -49,7 +50,7 @@ function NDIModal({ onClose }) {
         const nextUrl = new URLSearchParams(window.location.search).get('next') || null;
         const timer = setInterval(async () => {
             try {
-                const res  = await fetch(`/api/auth/ndi/status/?thread_id=${threadId}`);
+                const res  = await fetch(`${BASE_URL}/auth/ndi/status/?thread_id=${threadId}`);
                 const data = await res.json();
                 if (data.authenticated) {
                     clearInterval(timer);
@@ -323,7 +324,7 @@ function AgencyLoginForm({ onBack, onSuccess }) {
         if (!form.username || !form.password) { setError('Please enter both username and password.'); return; }
         setError(''); setLoading(true);
         try {
-            const res  = await fetch('/api/auth/login/', {
+            const res  = await fetch(`${BASE_URL}/auth/login/`, {
                 method:  'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body:    JSON.stringify({ username: form.username, password: form.password }),
