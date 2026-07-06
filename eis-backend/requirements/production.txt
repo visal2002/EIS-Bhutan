@@ -1,7 +1,0 @@
--r base.txt
-
-# ── Static files (whitenoise used in production.py) ───────────────────
-whitenoise==6.6.0
-
-# ── Monitoring (optional — uncomment to enable) ────────────────────────
-# sentry-sdk==2.3.1
