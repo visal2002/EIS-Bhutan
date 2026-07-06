@@ -13,6 +13,7 @@ import csv, io, time, codecs
 
 from django.db import transaction, IntegrityError
 from rest_framework import status
+from rest_framework.exceptions import ValidationError
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response

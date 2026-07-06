@@ -28,7 +28,15 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@vitejs/plugin-react": "^6.0.1",
-    "vite": "^8.0.1"
+    "@vitest/ui": "^4.1.9",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "jsdom": "^29.1.1",
+    "vite": "^8.0.1",
+    "vitest": "^4.1.9"
   }
 }
