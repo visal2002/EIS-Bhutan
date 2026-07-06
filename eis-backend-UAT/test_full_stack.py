@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 """
 EIS Full-Stack Integration Test
 Covers: Database, Backend API, Auth, All App Modules
@@ -5,10 +6,10 @@ Covers: Database, Backend API, Auth, All App Modules
 import os
 import sys
 import json
-import django
+import django  # pyrefly: ignore [missing-import]
 import requests
 from pathlib import Path
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # pyrefly: ignore [missing-import]
 
 # Force UTF-8 output on Windows
 import io
@@ -51,7 +52,7 @@ def section(title):
 # ─────────────────────────────────────────────────────────────
 section("1. DATABASE CONNECTIVITY")
 try:
-    from django.db import connection
+    from django.db import connection  # pyrefly: ignore [missing-import]
     with connection.cursor() as cursor:
         cursor.execute("SELECT version();")
         version = cursor.fetchone()[0]
@@ -134,7 +135,7 @@ except Exception as e:
 # 5. AUTHENTICATION API
 # ─────────────────────────────────────────────────────────────
 section("5. AUTHENTICATION API")
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model  # pyrefly: ignore [missing-import]
 User = get_user_model()
 TEST_USERNAME = "test_admin"
 TEST_PASSWORD = "TestAdmin@2024"
