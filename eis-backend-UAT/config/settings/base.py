@@ -6,9 +6,17 @@ from django.urls import reverse_lazy
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "change-me-in-production")
+_SECRET_KEY_DEFAULT = "change-me-in-production"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", _SECRET_KEY_DEFAULT)
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
+
+# Fail fast if production runs with default secret key
+if not DEBUG and SECRET_KEY == _SECRET_KEY_DEFAULT:
+    raise RuntimeError(
+        "SECURITY ERROR: You must set a strong DJANGO_SECRET_KEY environment variable in production."
+    )
+
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
