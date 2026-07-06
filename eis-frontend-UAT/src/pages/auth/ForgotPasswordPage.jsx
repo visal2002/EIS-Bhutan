@@ -5,7 +5,7 @@ import { Mail, KeyRound, Lock, CheckCircle2, ArrowLeft,
          Eye, EyeOff, RefreshCw, Shield } from 'lucide-react';
 import { useSiteSettings } from '../../context/SiteSettingsContext';
 
-const BASE_URL = 'http://127.0.0.1:8000/api';
+import { BASE_URL } from '../../services/api';
 
 // ── Shared ────────────────────────────────────────────────────────
 function Field({ label, error, children }) {
